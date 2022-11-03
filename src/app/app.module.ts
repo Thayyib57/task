@@ -12,8 +12,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import {NgxPaginationModule} from 'ngx-pagination'
 import { TestInterceptor } from './interceptor/test.interceptor';
-import { HelloComponent } from './hello/hello.component';
-import { HiiComponent } from './hii/hii.component';
 
 
 @NgModule({
@@ -21,8 +19,6 @@ import { HiiComponent } from './hii/hii.component';
     AppComponent,
     OrgpolComponent,
     CreateComponent,
-    HelloComponent,
-    HiiComponent
   ],
   
   imports: [
