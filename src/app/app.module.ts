@@ -12,13 +12,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import {NgxPaginationModule} from 'ngx-pagination'
 import { TestInterceptor } from './interceptor/test.interceptor';
+import { HelloComponent } from './hello/hello.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     OrgpolComponent,
-    CreateComponent
+    CreateComponent,
+    HelloComponent
   ],
   
   imports: [
