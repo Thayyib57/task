@@ -1,0 +1,52 @@
+<nav class="navbar bg-light" >
+    <div class="container-fluid" >
+      <a class="navbar-brand" href="#" >
+        organisation-policy
+      </a>
+      <!-- <div>
+        <select>
+          <option value="en">English</option>
+          <option value="de">German</option>
+          <option value="ar">عربي</option>
+        </select>
+      </div> -->
+    </div>
+  </nav>
+<br>
+<div>
+    <button type="button" (click)="navigate()" class="btn btn-primary">
+        Create</button>   
+</div>
+
+<br>
+<table class="table table-success table-striped table-hover" style="border: 1px solid;">
+    <thead>
+      <tr style="border: 1px solid;">
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Org_id</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of polArray | paginate:{ 
+          itemsPerPage:5,
+          currentPage:page,
+          totalItems:count}">
+        <!-- <tr *ngFor="let item of polArray"> -->
+            <td>{{item.id}}</td>
+            <td>{{item.title | uppercase}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.status_id}}</td>
+            <td>
+              <button (click)="navigateToEdit(item.id)" class="btn btn-secondary">Edit</button>
+              <button (click)="delet(item.id)" class="btn btn-light">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div>
+  <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="page = ($event)"></pagination-controls>
+</div>
+<br>

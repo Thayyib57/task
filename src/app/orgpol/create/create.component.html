@@ -1,0 +1,19 @@
+<br>
+<div>
+    <form  #orgpol="ngForm" (ngSubmit)="onSubmit()" >
+        <div>
+            <label>Title</label><br>
+            <input type="text" name="title" required #title="ngModel" class="form-control" [(ngModel)]="data.title"> 
+            <small class="text-danger" *ngIf="orgpol.submitted&&title.errors?.['required']">title required</small>
+        </div>
+            <br>
+        <div>
+            <label>Description</label><br>
+            <textarea name="description" cols="25" rows="4" class="form-control" placeholder="Write something here..." [(ngModel)]="data.description" ></textarea>
+        </div>
+        <br>
+        <div>
+            <button type="submit" [disabled]="!orgpol.valid" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>    
