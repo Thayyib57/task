@@ -13,6 +13,7 @@ import { ToastrModule } from 'ngx-toastr';
 import {NgxPaginationModule} from 'ngx-pagination'
 import { TestInterceptor } from './interceptor/test.interceptor';
 import { HelloComponent } from './hello/hello.component';
+import { HiiComponent } from './hii/hii.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HelloComponent } from './hello/hello.component';
     AppComponent,
     OrgpolComponent,
     CreateComponent,
-    HelloComponent
+    HelloComponent,
+    HiiComponent
   ],
   
   imports: [
